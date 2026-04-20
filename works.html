@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media | David Neiberger</title>
+  <meta name="description" content="A curated collection of video, social, and visual content by David Neiberger." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://davidneiberger.com/works.html" />
+  <meta property="og:title"       content="Media | David Neiberger" />
+  <meta property="og:description" content="A curated collection of video, social, and visual content." />
+  <meta property="og:image"       content="https://davidneiberger.com/images/david-neiberger.jpg" />
+
+  <!-- Twitter/X card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Media | David Neiberger" />
+  <meta name="twitter:description" content="A curated collection of video, social, and visual content." />
+  <meta name="twitter:image"       content="https://davidneiberger.com/images/david-neiberger.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,600;1,500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__logo">DN</a>
+    <ul class="nav__links">
+      <li><a href="index.html#work">Writing</a></li>
+      <li><a href="works.html" class="nav__active">Media</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact" class="nav__cta">Connect</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="container">
+      <p class="hero__label">Media</p>
+      <h1 class="page-header__title">Selected<br>Works</h1>
+    </div>
+  </header>
+
+  <!-- FILTER BAR -->
+  <div class="works-filters">
+    <div class="container">
+      <div class="works-filters__inner">
+        <button class="works-filter-btn is-active" data-filter="all">All</button>
+        <button class="works-filter-btn" data-filter="video">Video</button>
+        <button class="works-filter-btn" data-filter="social">Social</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKS GRID -->
+  <section class="works-section">
+    <div class="container">
+
+      <p class="works-disclaimer">Work shown reflects contributions across past and present roles. Views are my own.</p>
+
+      <div class="works-grid" id="works-grid">
+
+        <!--
+          HOW TO ADD ITEMS:
+          - data-type="video"    — YouTube or other video content
+          - data-type="social"   — LinkedIn, Instagram, etc.
+          - data-type="article"  — Written/published pieces
+          - Add class "works-card--wide" to span 2 columns (featured pieces)
+          - Update works-card__context with the correct company and year
+        -->
+
+        <!-- FEATURED: AI Finance Video (wide) -->
+        <article class="works-card works-card--wide" data-type="video">
+          <a href="https://www.youtube.com/watch?v=Q6yZuP8JK4s" class="works-card__link" target="_blank" rel="noopener">
+            <div class="works-card__media">
+              <img src="https://img.youtube.com/vi/Q6yZuP8JK4s/maxresdefault.jpg" alt="Revolutionizing Finance: The Impact of AI on Financial Accounting" class="works-card__img" />
+              <div class="works-card__play" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="works-card__info">
+              <span class="works-card__type works-card__type--video">Video</span>
+              <div class="works-card__title-group">
+                <h2 class="works-card__title">Revolutionizing Finance: The Impact of AI on Financial Accounting</h2>
+                <span class="works-card__context">Sockeye Consulting · 2025</span>
+              </div>
+              <span class="works-card__arrow">↗</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- LinkedIn Social Post -->
+        <article class="works-card" data-type="social">
+          <a href="https://www.linkedin.com/posts/david-neiberger_thats-a-wrap-at-sage-future-for-partners-activity-7394527031784542208-xtyN" class="works-card__link" target="_blank" rel="noopener">
+            <div class="works-card__media">
+              <img src="images/linkedin-post.jpg" alt="Sage Future for Partners event" class="works-card__img" />
+            </div>
+            <div class="works-card__info">
+              <span class="works-card__type works-card__type--social">Social</span>
+              <div class="works-card__title-group">
+                <h2 class="works-card__title">That's a Wrap at Sage Future for Partners</h2>
+                <span class="works-card__context">Sage · Nov 2025</span>
+              </div>
+              <span class="works-card__arrow">↗</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Ledger Recap: Sage Intacct vs CMIC -->
+        <article class="works-card" data-type="video">
+          <a href="https://www.youtube.com/watch?v=gTaQzQs57kg" class="works-card__link" target="_blank" rel="noopener">
+            <div class="works-card__media">
+              <img src="https://img.youtube.com/vi/gTaQzQs57kg/maxresdefault.jpg" alt="Ledger Recap: Sage Intacct vs CMIC" class="works-card__img" />
+              <div class="works-card__play" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="works-card__info">
+              <span class="works-card__type works-card__type--video">Video</span>
+              <div class="works-card__title-group">
+                <h2 class="works-card__title">Ledger Recap: Sage Intacct vs CMIC</h2>
+                <span class="works-card__context">Sockeye Consulting · 2025</span>
+              </div>
+              <span class="works-card__arrow">↗</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Ledger Recap: Sage Intacct vs Viewpoint -->
+        <article class="works-card" data-type="video">
+          <a href="https://www.youtube.com/watch?v=BDAGn_1apvA" class="works-card__link" target="_blank" rel="noopener">
+            <div class="works-card__media">
+              <img src="https://img.youtube.com/vi/BDAGn_1apvA/maxresdefault.jpg" alt="Ledger Recap: Sage Intacct vs Viewpoint" class="works-card__img" />
+              <div class="works-card__play" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="works-card__info">
+              <span class="works-card__type works-card__type--video">Video</span>
+              <div class="works-card__title-group">
+                <h2 class="works-card__title">Ledger Recap: Sage Intacct vs Viewpoint</h2>
+                <span class="works-card__context">Sockeye Consulting · 2025</span>
+              </div>
+              <span class="works-card__arrow">↗</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Fitviz App (College Practicum) -->
+        <article class="works-card" data-type="video">
+          <a href="https://www.youtube.com/watch?v=B4Ul7AoGm2Q" class="works-card__link" target="_blank" rel="noopener">
+            <div class="works-card__media">
+              <img src="https://img.youtube.com/vi/B4Ul7AoGm2Q/maxresdefault.jpg" alt="Fitviz Pro: Practicum Presentation" class="works-card__img" />
+              <div class="works-card__play" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="works-card__info">
+              <span class="works-card__type works-card__type--video">Video</span>
+              <div class="works-card__title-group">
+                <h2 class="works-card__title">Fitviz Pro: Fitness App Practicum</h2>
+                <span class="works-card__context">Univ. of Alaska Southeast · 2025</span>
+              </div>
+              <span class="works-card__arrow">↗</span>
+            </div>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 David Neiberger</p>
+      <p>davidneiberger.com</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // Filter functionality
+    const filterBtns = document.querySelectorAll('.works-filter-btn');
+    const cards = document.querySelectorAll('.works-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        filterBtns.forEach(b => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        cards.forEach(card => {
+          card.style.display = (filter === 'all' || card.dataset.type === filter) ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
