@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══════════════════════════════════════════════════════════
+       HOW TO USE THIS TEMPLATE
+       ─────────────────────────────────────────────────────────
+       1. Copy this file and rename it: your-post-slug.html
+          (lowercase, hyphens only — e.g. why-content-calendars-fail.html)
+       2. Search for "FILL IN" — there are 8 spots to update.
+       3. Write your post inside the .post-body div (Step 3 below).
+       4. Add a matching <li> card to blog/index.html (see the
+          comment block there for the exact snippet to copy).
+       5. Delete this instruction comment before publishing.
+  ═══════════════════════════════════════════════════════════ -->
+
+  <!-- ─── FILL IN 1: Page title (same as your post's h1) ─── -->
+  <title>POST TITLE HERE | David Neiberger</title>
+
+  <!-- ─── FILL IN 2: One sentence shown in search results and link previews ─── -->
+  <meta name="description" content="ONE-SENTENCE DESCRIPTION OF THE POST." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+
+  <!-- Open Graph ─────────────────────────────────────────────── -->
+  <meta property="og:type" content="article" />
+  <!-- ─── FILL IN 3: Replace POST-SLUG with your filename (no .html) ─── -->
+  <meta property="og:url" content="https://davidneiberger.com/blog/POST-SLUG.html" />
+  <!-- ─── FILL IN 4: Same as <title> above ─── -->
+  <meta property="og:title" content="POST TITLE HERE | David Neiberger" />
+  <!-- ─── FILL IN 5: Same as <meta name="description"> above ─── -->
+  <meta property="og:description" content="ONE-SENTENCE DESCRIPTION OF THE POST." />
+  <!-- Optional: swap in a post-specific image URL, or leave as-is -->
+  <meta property="og:image" content="https://davidneiberger.com/images/david-neiberger.jpg" />
+
+  <!-- Twitter / X card ───────────────────────────────────────── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- ─── FILL IN 6: Same title ─── -->
+  <meta name="twitter:title" content="POST TITLE HERE | David Neiberger" />
+  <!-- ─── FILL IN 7: Same description ─── -->
+  <meta name="twitter:description" content="ONE-SENTENCE DESCRIPTION OF THE POST." />
+  <meta name="twitter:image" content="https://davidneiberger.com/images/david-neiberger.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,600;1,500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- ─── NAV ─── -->
+  <!-- No changes needed here — Blog is already marked active. -->
+  <nav class="nav" id="nav">
+    <a href="../index.html" class="nav__logo">DN</a>
+    <ul class="nav__links">
+      <li><a href="../index.html#work">Writing</a></li>
+      <li><a href="index.html" class="nav__active">Blog</a></li>
+      <li><a href="../works.html">Media</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact" class="nav__cta">Connect</a></li>
+    </ul>
+  </nav>
+
+  <!-- ─── POST HEADER ─── -->
+  <!-- STEP 2 OF 3: Fill in the post title (FILL IN 8) and publication date. -->
+  <header class="post-header">
+    <div class="container">
+      <span class="post-header__label">Blog</span>
+      <!-- ─── FILL IN 8: The post's full title — same as <title> above ─── -->
+      <h1 class="post-header__title">POST TITLE HERE</h1>
+      <!-- Publication date — e.g. "June 2026" -->
+      <p class="post-header__date">Month YYYY</p>
+    </div>
+  </header>
+
+  <!-- ─── POST CONTENT ─── -->
+  <!-- STEP 3 OF 3: Write your post inside .post-body below.
+       Delete the reference comment when you're done.         -->
+  <main class="section">
+    <div class="container">
+      <div class="post-body">
+
+        <!--
+          ┌───────────────────────────────────────────────────┐
+          │  CONTENT REFERENCE — delete this block when done  │
+          │                                                    │
+          │  <p>Body paragraph.</p>                            │
+          │                                                    │
+          │  <h2>Section Heading</h2>                          │
+          │  (Cormorant Garamond, with a top rule divider)     │
+          │                                                    │
+          │  <h3>Sub-section Label</h3>                        │
+          │  (Small-caps style, gold accent color)             │
+          │                                                    │
+          │  <blockquote>                                      │
+          │    <p>Pull quote callout text here.</p>            │
+          │  </blockquote>                                     │
+          │                                                    │
+          │  <ul>                                              │
+          │    <li>Bullet item</li>                            │
+          │  </ul>                                             │
+          │                                                    │
+          │  <ol>                                              │
+          │    <li>Numbered item</li>                          │
+          │  </ol>                                             │
+          │                                                    │
+          │  <hr>  ← section break / scene divider            │
+          │                                                    │
+          │  <strong>bold</strong>  <em>italic</em>            │
+          │  <a href="https://...">linked text</a>             │
+          └───────────────────────────────────────────────────┘
+        -->
+
+        <p><!-- Write your opening paragraph here. --></p>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ─── BACK LINK ─── -->
+  <div class="post-back">
+    <div class="container">
+      <a href="index.html" class="post-back__link">← All Posts</a>
+    </div>
+  </div>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 David Neiberger</p>
+      <p>davidneiberger.com</p>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+</body>
+</html>

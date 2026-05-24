@@ -8,7 +8,7 @@ window.addEventListener('scroll', () => {
 // ── Intersection Observer: trigger work item animations ──────
 // Work items start with opacity:0 via CSS animation, but only
 // play when visible so items below the fold aren't wasted.
-const items = document.querySelectorAll('.work__item');
+const items = document.querySelectorAll('.work__item, .blog-list__item');
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
