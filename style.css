@@ -10,6 +10,10 @@
   --accent:     #c8a97e;   /* warm gold */
   --accent-dim: rgba(200, 169, 126, 0.12);
 
+  /* Internal: used to patch hardcoded bg values in nav + filter bar */
+  --nav-scrolled-bg:  rgba(11, 11, 11, 0.85);
+  --filter-bar-bg:    rgba(11, 11, 11, 0.90);
+
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body:    'Inter', system-ui, sans-serif;
 
@@ -82,7 +86,7 @@ img, svg {
 }
 
 .nav.scrolled {
-  background: rgba(11, 11, 11, 0.85);
+  background: var(--nav-scrolled-bg);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
@@ -535,7 +539,7 @@ img, svg {
   position: sticky;
   top: var(--nav-h);
   z-index: 50;
-  background: rgba(11, 11, 11, 0.9);
+  background: var(--filter-bar-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
@@ -1064,6 +1068,44 @@ img, svg {
 .post-back__link:hover {
   color: var(--accent);
 }
+
+/* ────────────────────────────────────────────────────────────
+   LIGHT MODE TOKENS
+──────────────────────────────────────────────────────────── */
+[data-theme="light"] {
+  --bg:               #faf8f5;
+  --bg-raised:        #f0ece5;
+  --border:           rgba(0, 0, 0, 0.10);
+  --text:             #1a1a1a;
+  --text-muted:       #777;
+  --accent-dim:       rgba(200, 169, 126, 0.18);
+  --nav-scrolled-bg:  rgba(250, 248, 245, 0.88);
+  --filter-bar-bg:    rgba(250, 248, 245, 0.92);
+}
+
+/* ────────────────────────────────────────────────────────────
+   THEME TOGGLE BUTTON
+──────────────────────────────────────────────────────────── */
+.nav__theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  padding: 0.3em;
+  margin-left: clamp(0.25rem, 1vw, 0.75rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  transition: color 0.2s;
+  flex-shrink: 0;
+}
+.nav__theme-toggle:hover { color: var(--text); }
+
+/* In dark mode show moon, in light mode show sun */
+.theme-icon--sun { display: none; }
+[data-theme="light"] .theme-icon--moon { display: none; }
+[data-theme="light"] .theme-icon--sun  { display: block; }
 
 /* ────────────────────────────────────────────────────────────
    ANIMATIONS

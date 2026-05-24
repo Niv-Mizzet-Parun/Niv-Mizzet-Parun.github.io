@@ -1,3 +1,21 @@
+// ── Theme toggle ─────────────────────────────────────────────
+// Restore saved preference immediately (avoids flash on page load)
+(function () {
+  if (localStorage.getItem('theme') === 'light') {
+    document.documentElement.dataset.theme = 'light';
+  }
+})();
+
+document.addEventListener('DOMContentLoaded', function () {
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var isLight = document.documentElement.dataset.theme === 'light';
+    document.documentElement.dataset.theme = isLight ? '' : 'light';
+    localStorage.setItem('theme', isLight ? 'dark' : 'light');
+  });
+});
+
 // ── Nav: add .scrolled class on scroll ──────────────────────
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
