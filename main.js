@@ -1,8 +1,9 @@
 // ── Theme toggle ─────────────────────────────────────────────
-// Restore saved preference immediately (avoids flash on page load)
+// Light is the default; restore a saved dark preference immediately
+// (avoids flash on page load)
 (function () {
-  if (localStorage.getItem('theme') === 'light') {
-    document.documentElement.dataset.theme = 'light';
+  if (localStorage.getItem('theme') === 'dark') {
+    document.documentElement.dataset.theme = 'dark';
   }
 })();
 
@@ -10,9 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
   btn.addEventListener('click', function () {
-    var isLight = document.documentElement.dataset.theme === 'light';
-    document.documentElement.dataset.theme = isLight ? '' : 'light';
-    localStorage.setItem('theme', isLight ? 'dark' : 'light');
+    var isDark = document.documentElement.dataset.theme === 'dark';
+    document.documentElement.dataset.theme = isDark ? '' : 'dark';
+    localStorage.setItem('theme', isDark ? 'light' : 'dark');
   });
 });
 
