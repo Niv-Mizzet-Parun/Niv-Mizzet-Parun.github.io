@@ -19,6 +19,14 @@
   --red-dim:    rgba(179, 26, 26, 0.07);
   --gold-dim:   rgba(211, 174, 54, 0.16);
 
+  /* Signature tricolor stripe — red / gold / blue */
+  --tricolor: linear-gradient(
+    90deg,
+    var(--red)  0    33.33%,
+    var(--gold) 33.33% 66.66%,
+    var(--blue) 66.66% 100%
+  );
+
   /* Internal: used to patch hardcoded bg values in nav + filter bar */
   --nav-scrolled-bg:  rgba(254, 254, 254, 0.88);
   --filter-bar-bg:    rgba(254, 254, 254, 0.92);
@@ -53,6 +61,22 @@ body {
   font-weight: 400;
   line-height: 1.7;
   overflow-x: hidden;
+}
+
+/* Signature tricolor bar pinned to the very top of every page */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0 0 auto;
+  height: 4px;
+  background: var(--tricolor);
+  z-index: 200;
+  pointer-events: none;
+}
+
+::selection {
+  background: var(--gold);
+  color: #000000;
 }
 
 a {
@@ -129,15 +153,15 @@ img, svg {
 .nav__links a:hover { color: var(--text); }
 
 .nav__cta {
-  border: 1px solid var(--border);
+  border: 1px solid var(--red);
   padding: 0.45em clamp(0.5em, 1.5vw, 1.1em);
   border-radius: 0;
   color: var(--text) !important;
   transition: background 0.2s, border-color 0.2s !important;
 }
 .nav__cta:hover {
-  background: var(--accent-dim);
-  border-color: var(--accent) !important;
+  background: var(--red-dim);
+  border-color: var(--red) !important;
 }
 
 /* ────────────────────────────────────────────────────────────
@@ -188,6 +212,10 @@ img, svg {
   text-transform: uppercase;
   color: var(--text);
   margin-bottom: 2rem;
+}
+.hero__name::after {
+  content: '.';
+  color: var(--red);
 }
 
 .hero__sub {
@@ -247,7 +275,8 @@ img, svg {
   gap: 1.25rem;
   margin-bottom: 3.5rem;
   padding-bottom: 1.5rem;
-  border-bottom: 2px solid var(--text);
+  border-bottom: 3px solid;
+  border-image: var(--tricolor) 1;
 }
 
 .section__num {
@@ -257,6 +286,10 @@ img, svg {
   color: var(--red);
   letter-spacing: 0.12em;
 }
+
+/* Cycle the brand palette through section numbers: 01 red, 02 gold, 03 blue */
+.about   .section__num { color: var(--gold-ink); }
+.contact .section__num { color: var(--blue); }
 
 .section__title {
   font-family: var(--font-display);
@@ -493,8 +526,8 @@ img, svg {
   gap: 0.5em;
   margin-top: 0.75rem;
   padding: 0.85em 2em;
-  background: #b31a1a;
-  color: #fefefe;
+  background: var(--red);
+  color: var(--bg);
   font-size: 0.82rem;
   font-weight: 500;
   letter-spacing: 0.1em;
@@ -503,7 +536,7 @@ img, svg {
   transition: background 0.2s, transform 0.2s var(--ease);
 }
 .contact__btn:hover {
-  background: #135c9f;
+  background: var(--blue);
   transform: translateY(-1px);
 }
 
@@ -512,7 +545,8 @@ img, svg {
 ──────────────────────────────────────────────────────────── */
 .footer {
   padding-block: 2rem;
-  border-top: 1px solid var(--border);
+  border-top: 3px solid;
+  border-image: var(--tricolor) 1;
 }
 
 .footer .container {
@@ -616,11 +650,17 @@ img, svg {
 
 .works-card {
   border: 1px solid var(--border);
+  border-top: 3px solid var(--accent);
   border-radius: 0;
   overflow: hidden;
   opacity: 0;
   animation: fadeUp 0.6s var(--ease) forwards;
 }
+
+/* Top strip color keyed to content type: video blue, social red, article gold */
+.works-card[data-type="video"]   { border-top-color: var(--blue); }
+.works-card[data-type="social"]  { border-top-color: var(--red); }
+.works-card[data-type="article"] { border-top-color: var(--gold); }
 
 .works-card:nth-child(1) { animation-delay: 0.05s; }
 .works-card:nth-child(2) { animation-delay: 0.12s; }
@@ -929,7 +969,8 @@ img, svg {
   padding-top: calc(var(--nav-h) + clamp(4rem, 8vw, 7rem));
   padding-bottom: clamp(2.5rem, 5vw, 4rem);
   padding-inline: clamp(1.5rem, 5vw, 3.5rem);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 3px solid;
+  border-image: var(--tricolor) 1;
   opacity: 0;
   animation: fadeUp 1s var(--ease) 0.15s forwards;
 }
